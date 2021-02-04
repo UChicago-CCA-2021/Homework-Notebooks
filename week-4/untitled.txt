@@ -1,0 +1,48 @@
+if DEPT and not TERMS:
+        dept_str = arg_dict['dept']
+        SQL_d = SQL_terms + f''' SELECT courses.dept, courses.course_num, courses.title
+                    FROM courses JOIN catalog_index JOIN
+                    ON courses.course_id = catalog_index.course_id
+                    WHERE courses.dept = "{dept}"'''
+
+    if len(terms_list) > 0:
+
+        SQL_str_terms = f'''SELECT courses.dept, courses.course_num, courses.title
+                    FROM courses JOIN catalog_index
+                    ON courses.course_id = catalog_index.course_id
+                    WHERE catalog_index.word IN {str(tupterms)}'''
+
+        if dept == '':
+            
+            return_table = c.execute(SQL_str_terms).fetchall()
+
+        elif dept != '':
+
+            SQL_str1 = SQL_str_terms + f''' AND courses.dept = "{dept}"'''
+            return_table = c.execute(SQL_str1).fetchall()
+
+    elif len(terms_list) == 0 and dept != '':
+        SQL_str_dept = f'''
+            SELECT courses.dept, courses.course_num, courses.title
+            FROM courses JOIN catalog_index
+            ON courses.course_id = catalog_index.course_id
+            WHERE courses.dept = "{dept}"
+            '''
+        return_table = c.execute(SQL_str_dept).fetchall()
+
+    return_vars = ['dept', 'course_num', 'title', 'section_num', 'day', 'time_start', 'time_end', 'enrollment']
+
+
+
+
+
+                    #for mp_ID in list_mps:
+                    #    SQL_tde_mp = SQL_tde + f''' AND sections.meeting_pattern_id = "{mp_ID}"'''
+                    #    return_table.append(c.execute(SQL_tde_mp).fetchall())
+            
+                    #list_mps = get_list_mpID(arg_dict)
+                    #SQL_tde_mp = SQL_tde + f''' AND sections.meeting_pattern_id IN {list_mps}'''
+                    
+                    #SQL_final = SQL_tde_mp
+                    
+                #return_table = c.execute(SQL_final).fetchall()

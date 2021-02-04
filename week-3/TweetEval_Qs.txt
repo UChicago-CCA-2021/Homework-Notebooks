@@ -1,0 +1,29 @@
+
+On a scale of 1 to 10, where 1 is an action more indicative of introverted tendencies and 10 is an action of more extroverted tendencies, please rank the following actions:
+
+Using Twitter (incl. scrolling, liking, retweeting, tweeting) (1-10):
+
+Scrolling through Twitter without interacting (liking/retweeting) with posts (1-10):
+
+Liking other people's Tweets (1-10):
+
+Retweeting Tweets (1-10):
+
+Tweeting regularly (1-10):
+
+.....................................................................................
+
+Please read the following Tweet and regardless of your personal feelings about the topic, decide where do you think that someone who would tweet this falls on the spectrum described above of introverted (1) to extroverted (10):
+
+"@otherUser As a man who has handed a jar of pickles to his wife to open way too many times.  No you don't." (1-10):
+
+"MOST IMPORTANT: Kiddo is amazing about wearing her masks. We frame it as helping our community, emphasizing that it's our part. When she asks why others don't wear them, we say there are some who choose themselves, but the more that choose community, the sooner this will be over."(1-10):
+
+"Everyone has these fun year-of lists for 2020, but I watched less, read less, played less, slept less because virtual kindergarten on top of a day job/writing is just exhausting and consuming. But here are some fun parenting hacks" (1-10):
+
+"I like Presidents who weren't banned from twitter." (1-10):
+............................................................................................
+
+Data will be stored: question: column and user: row (each user will have their own row of answers corresponding col num to q num)
+
+
